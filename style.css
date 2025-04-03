@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
 body {
 display: flex;
 justify-content: center;
@@ -14,6 +17,7 @@ width: 500px;
 height: 700px;
 display: flex;
 flex-wrap: wrap;
+overflow:hidden;
 background-color: rgb(255, 255, 255);
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 border-radius: 0px 8px 8px 8px;
@@ -109,7 +113,7 @@ position: relative;
 .handwritten-content {
 position: relative;
 bottom: 390px; /* Keep it positioned near the bottom */
-left: 215px;
+left: 225px;
 transform: translateX(-50%) rotate(-1deg); /* Center and slightly rotate */
 display: flex;
 gap: 15px; /* Space between image and text */
@@ -117,6 +121,7 @@ z-index: 10;
 border-radius: 5px ;
 max-width: 400px; /* Prevents it from being too wide */
 overflow: hidden;
+padding-bottom: 15px;
 }
 
 .beaLetter {
@@ -128,47 +133,182 @@ border: 3px solid #9585ec;
 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 flex-shrink: 0;
 }
+.img2 {
+width: 50px;
+height: 50px;
+object-fit: cover;
+border-radius: 100%;
+border: 3px solid #03a626;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+flex-shrink: 0;
+}
 
-.handwritten-text {
+.handwritten-text { 
 font-family: 'Segoe Script', 'Bradley Hand', cursive;
 color: #271e1e;
+margin-top: 0px;
 line-height: 1.5; /* Adjusted line height for better readability */
-font-size: 10px; /* Increased font size for better readability */
+font-size: 20px; /* Increased font size for better readability */
 text-align: left;
 max-width: 400px;
+}
+
+p{
+    margin: 0px;
+ }
+
+.sign {
+text-align: right;
 }
 
 @media (max-width: 600px) { /* For small screens (phones) */
     
 .top-section {
+background-color: #F2F2F2;
+padding: 15px 0 10px 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: left;
+}
+
+.message {
+font-size: 25px;
+font-weight: bold;
+margin-bottom: 20px;
+color: #4CAF50;
+font-family: "Schoolbell", cursive;
+text-align: left;
+}
+
+.photo-container {
+position: relative;
+width: 200px;
+height: 200px;
+margin-right: 1px;
+transform: rotate(5deg);
+}
+
+.photo {
+width: 90%;
+height: 90%;
+object-fit: cover;
+border: 2px solid #fff; 
+box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.decoration {
+position: absolute;
+width: 10px;
+height: 45px;
+background-color: rgb(226, 226, 20);
+transform: rotate(115deg);
+z-index: 0;
+}
+
+.decoration.pink {
+background-color: #ff69b4;
+top: -13px;
+right: 21px;
+transform: rotate(134deg);
+}
+
+.decoration.yellow {
+bottom: 4px;
+left: 8px;
+transform: rotate(130deg);
+}
+
+.lines-section {
+flex: 1;
+padding: 0;
+position: relative;
+justify-content: space-evenly;
+}
+
+.line {
+width: 100%;
+height: 1px;
+background-color: #ccc;
+margin: 20px 0;
+opacity: 0.5;
+position: relative;
+}
+
+.handwritten-content {
+position: relative;
+bottom: 390px; /* Keep it positioned near the bottom */
+left: 230px;
+transform: translateX(-50%) rotate(-1deg); /* Center and slightly rotate */
+display: flex;
+gap: 20px; /* Space between image and text */
+z-index: 10;
+border-radius: 5px ;
+max-width: 400px; /* Prevents it from being too wide */
+padding-bottom: 25px;
+}
+}
+
+.handwritten-text {
+font-size: 10px; /* Reduce font size for better fit */
+text-align:justify; /* Align text for better readability */
+max-width: 900px; /* Prevents it from being too wide */
+}
+
+    p{
+        margin: 0px;
+        text-align: justify;
+     }
+   .sign {
+        text-align: right;
+    }
+    .signLeft {
+        text-align: left;
+    }
+    .msgRight{
+        text-align: right;
+    }
+    
+.beaLetter {
+width: 45px; /* Adjust image size for smaller screens */
+height: 45px;
+}
+.img2 {
+width: 45px; /* Adjust image size for smaller screens */
+height: 45px;
+}
+
+@media (max-width: 500px) {
+ 
+.top-section {
     background-color: #F2F2F2;
-    padding: 15px 0 10px 0;
+    padding: 20px 0 30px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: left;
+    text-align: center;
     }
     
     .message {
-    font-size: 25px;
+    font-size: 28px;
     font-weight: bold;
     margin-bottom: 20px;
     color: #4CAF50;
     font-family: "Schoolbell", cursive;
-    text-align: left;
+    text-align: center;
     }
     
     .photo-container {
     position: relative;
     width: 200px;
     height: 200px;
-    margin-right: 30px;
+    margin-right: 1px;
     transform: rotate(5deg);
     }
     
     .photo {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     border: 2px solid #fff; 
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -185,14 +325,14 @@ max-width: 400px;
     
     .decoration.pink {
     background-color: #ff69b4;
-    top: -13px;
-    right: 21px;
-    transform: rotate(134deg);
+    top: -10px;
+    right: 2px;
+    transform: rotate(130deg);
     }
     
     .decoration.yellow {
-    bottom: 4px;
-    left: 8px;
+    bottom: -12px;
+    left: 2px;
     transform: rotate(130deg);
     }
     
@@ -207,30 +347,57 @@ max-width: 400px;
     width: 100%;
     height: 1px;
     background-color: #ccc;
-    margin: 20px 0;
+    margin: 19px 0;
     opacity: 0.5;
     position: relative;
     }
-.handwritten-content {
+
+    .handwritten-content {
     position: relative;
-    bottom: 390px; /* Keep it positioned near the bottom */
+    bottom: 370px; /* Keep it positioned near the bottom */
     left: 215px;
     transform: translateX(-50%) rotate(-1deg); /* Center and slightly rotate */
     display: flex;
-    gap: 15px; /* Space between image and text */
+    justify-content: center;
+    gap: 25px; /* Space between image and text */
     z-index: 10;
     border-radius: 5px ;
     max-width: 400px; /* Prevents it from being too wide */
+    padding-bottom: 30px;
+    }
     
-}
-
-.handwritten-text {
-font-size: 10px; /* Reduce font size for better fit */
-text-align:left; /* Align text for better readability */
-}
-
-.beaLetter {
-width: 45px; /* Adjust image size for smaller screens */
-height: 45px;
-}
+    .beaLetter {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 100%;
+    border: 3px solid #9585ec;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    }
+    
+    .handwritten-text { 
+    font-family: 'Segoe Script', 'Bradley Hand', cursive;
+    color: #271e1e;
+    margin-top: 0px;
+    line-height: 1.5; /* Adjusted line height for better readability */
+    font-size: 13px; /* Increased font size for better readability */
+    text-align: justify;
+    max-width: 290px;
+    }
+    
+    p{
+        margin: 0px;
+        text-align: justify;
+     }
+   .sign {
+        text-align: right;
+    }
+    .signLeft {
+        text-align: left;
+    }
+    .msgRight{
+        text-align: right;
+    }
+    
 }
